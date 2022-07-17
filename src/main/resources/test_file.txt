@@ -1,0 +1,3 @@
+some test\file just for testing-purposes
+a very funny and    cool file indeed
+   [alaska]
