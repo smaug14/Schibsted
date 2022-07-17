@@ -4,8 +4,9 @@ ThisBuild / scalaVersion := "2.13.8"
 
 lazy val root = (project in file("."))
   .settings(
-    name := "Schibsted"
+    name := "Schibsted",
+    assembly / mainClass := Some("boot.Main"),
+    assembly / assemblyJarName := "schibsted-search.jar"
   )
 
-libraryDependencies += "org.scalactic" %% "scalactic" % "3.2.12"
 libraryDependencies += "org.scalatest" %% "scalatest" % "3.2.12" % "test"
