@@ -8,10 +8,11 @@ class FileTextSearchEngine(indexedFiles: Map[String, Vector[WordInFileStats]]) {
 
   private val topFilesCountLimit = 10
 
-  def searchText(textInput: String): Unit = {
+  def searchText(textInput: String): Vector[FileTextSearchResult] = {
     val normalizedTextInput = normalizeText(textInput)
     val searchResult = searchTextInIndexedFiles(normalizedTextInput)
     printSearchResult(searchResult)
+    searchResult
   }
 
   private def searchTextInIndexedFiles(textInput: Vector[String]): Vector[FileTextSearchResult] = {
